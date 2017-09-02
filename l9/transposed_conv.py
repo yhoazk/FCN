@@ -23,6 +23,11 @@ def upsample(x):
     num_outputs=3,
     kernel_size=2, #what is the difference between 2 and (2,2) for TF?
     stride=2)
+    """"
+    kernel_size: A list of length 2 holding the [kernel_height, kernel_width] of of the filters. Can be an int if both values are the same.
+    stride: A list of length 2: [stride_height, stride_width]. Can be an int if both strides are the same. Note that presently both strides must have the same value.
+    """"
+
 
 
 x = tf.constant(np.random.randn(1, 4, 4, 3), dtype=tf.float32)
